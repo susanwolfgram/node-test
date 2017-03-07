@@ -1,9 +1,17 @@
-app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'hbs');
+// app.set('views', path.join(__dirname, 'views'));
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).listen(1337, '127.0.0.1');
+console.log('Server running at http://127.0.0.1:1337/');
+
 var sql = require("seriate");
 
 // Change the config settings to match your 
 // SQL Server and database
+
 var config = {  
     "server": "IS-HAY04.ischool.uw.edu",
     "user": "INFO445",

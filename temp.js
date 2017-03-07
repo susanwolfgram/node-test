@@ -1,5 +1,6 @@
 window.onload = function() {
 	document.getElementById("startDate").oninput = log;
+	
 }
 
 function log() {
