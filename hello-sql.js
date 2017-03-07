@@ -1,3 +1,5 @@
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'views'));
 var sql = require("seriate");
 
 // Change the config settings to match your 
